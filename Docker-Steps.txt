@@ -1,0 +1,11 @@
+cd C:\Users\E1078130\STSWorkspace\BookService-1
+
+copy target\*.jar C:\Kiodex\Docker-TargetFolder
+
+cd C:\Kiodex\Docker-TargetFolder
+
+docker build --tag bookservice .
+
+docker run -p 8080:8080 bookservice
+
+docker run -d -p 8080:8080 --name BookService bookservice
